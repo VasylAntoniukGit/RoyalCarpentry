@@ -8,12 +8,14 @@
     "routes": [
         {
             "src": "/(.*)",
-            "status": 301,
-            "headers": { "Location": "https://realmcarpentry.co.uk/$1" }
-        },
-        {
-            "src": "/(.*)",
             "dest": "app.js"
         }
-    ]
+    ],
+    "redirects": [
+        {
+          "source": "/(.*)",
+          "destination": "https://realmcarpentry.co.uk/$1",
+          "permanent": true
+        }
+      ]
 }
